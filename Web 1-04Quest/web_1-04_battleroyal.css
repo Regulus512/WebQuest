@@ -1,0 +1,33 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+#base {
+    width: 630px; height:auto; margin: 100px auto;
+    display: flex; flex-direction: column;
+    /*background: lightgray;*/
+}
+#base>div {
+    display: flex; justify-content: center;
+    flex-wrap: wrap;
+}
+#base>div>div{
+    width: 80px; height: 80px; margin: 5px; overflow: hidden;
+    transform: skewX(-12deg);
+    background: gray;
+    border: white 3px solid; border-radius: 10px;
+    transition-duration: 0.2s;
+}
+#base>div>div>div{
+    width:97px; height: 74px; overflow:hidden;
+    position:relative; right: 10px; transform: skewX(12deg);
+    background-size: 97px 74px; background-repeat: no-repeat;
+
+}
+#base>div>div:hover{
+    z-index:1; overflow:hidden;
+    transform: skew(-12deg) scale(1.4);
+    background: pink;
+}

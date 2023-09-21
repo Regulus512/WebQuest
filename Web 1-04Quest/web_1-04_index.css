@@ -1,0 +1,133 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+body {
+    display: flex;
+    color: lightgray;
+}
+#base {
+    width:1280px; height: 720px; margin: 0 auto;
+    background: rgb(50,50,50);
+    display: flex;
+}
+
+#base>div.title{
+    width: 280px; height: 100%; border-right: 2px lightgray solid;
+    display: flex; flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.title div {
+    width:280px; height:auto; padding:10px;
+    /*background: rgba(0,13,236,0.3);*/
+}
+
+.titleup {
+    /* item: (center, center)*/
+    display: flex; justify-content: center; align-items: center;
+    /*background-color: pink;*/
+}
+.titleup >p {
+    font: bold italic 30pt/50px 'Times New Roman', Times, serif;
+}
+
+#base>div>div.titledown {
+    /* item: (center, bottom)*/
+    display: flex; justify-content: center; align-items: end;
+    /*background: lavender;*/
+}
+.titledown>p {
+    margin-bottom: 20px;
+    font: normal 10pt/16pt 'Verdana', sans-serif;
+}
+
+#base>div.contents {
+    display: flex; flex-direction: column;
+    width: 1000px;
+    /*background: rgba(236, 0, 118, 0.19);*/
+    overflow: hidden;
+}
+.contents> nav { /* semantic element*/
+    width: 100%; height: 120px;
+    border-bottom: 2px lightgray solid;
+    position: relative;
+    /*background: rgba(255, 250, 250, 0.5);*/
+}
+nav> div { /* mail icon */
+    position: absolute;
+    width: 30px; height: 30px;
+    background-image: url("mail.png"); background-size: 30px;
+    bottom: 10px; right: 10px;
+}
+
+section {
+    display: flex;
+    width: 100%; height: 600px;
+    /*background: rgba(25, 25, 112, 0.3);*/
+}
+
+section> article {
+    width: 250px; height: 100%;
+    position: relative;
+    opacity: 0.4;
+}
+
+article:hover {
+    opacity: 1;
+}
+article .back {
+    width: 0; height: 100%;
+    position: absolute; top: 0; left: 0;
+    background-image: url("back.png");
+    z-index: 0;
+    transition-duration: 0.5s;
+}
+article:hover .back {
+    width: 250px;
+    transition-duration: 0.5s;
+}
+
+.inner {
+    width: 170px; height: 460px; margin: 70px 40px;
+    display: flex; flex-direction: column;
+    /*background: #8FBC8F;*/
+}
+
+.inner div {
+    z-index: 1;
+    width: 170px;
+    /*background: pink;*/
+    /*border: 2px solid red;*/
+}
+.inner>.text {
+    height: 360px;
+    font-size: 15px; line-height: 24px;
+}
+.text>div { /* 0n and bottom line */
+    width: 60px; height: 50px;
+    font-size: 32px; font-weight: bold;
+    border-bottom: 2px solid lightgray;
+}
+.text>p>span {
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.inner>.image {
+    height: 100px;
+    background-size: 170px 100px;
+    transition-duration: 0.5s;
+}
+
+.image .link {
+    position: absolute;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+article:hover .image {
+    transform: translate(10px, -10px) scale(1.2);
+    transition-duration: 0.5s;
+}
+
