@@ -1,16 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
-    <meta/>
-    <link/>
-    <title></title>
-    <style></style>
-    <script></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 1-02</title>
 </head>
 
 <body>
+    <h1>HTML Header 1</h1>
+    <h6>Header 6</h6>
+    block type, 부모 상자의 너비 전체를 사용
 
+    <hr>
+    horizontal rules (empty tag) (block type)
+
+    <p>
+        paragraph (block type)<br>
+        A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and
+        after a paragraph.
+    </p>
+
+    (empty tag) (block type)
+    src, alt attribute를 필수 구성하도록 한다 <br>
+    <img src="image.jpg" alt="AI 이미지" width="10%">
+    <img src="./image.jpg" alt="AI 이미지" width="15%">
+    <img src="/web1-02/image.jpg" alt="AI 이미지" width="20%">
+    <img src="https://image.dongascience.com/Photo/2023/07/dce21d88c5d1f34ce89974c044c6ff17.jpg" alt="AI 이미지"
+        width="20%">
+    <img src="./img/image.jpg" alt="AI 이미지" width="15%"> <br>
+    list ul ol li (block type)<br>
+    li는 ul,ol이라는 부모 상자에 담겨 있으니까 inline 속성이 될 여지가 있지만 block 속성이다.<br>
+    그렇다면, inline 속성으로 다룰 수는 없을까? -> display: inline-block<br>
+    inline 타입의 수평 배치 방식이 가능하다
+    <ul>
+        <li style="list-style: none;">Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <h1>HTML Container</h1>
+    <hr>
+    <h2>A Division or Section</h2>
+    <div style="background-color:black; color:white; padding:20px;">
+        The <strong>div</strong> element defines a division or a section in an HTML document.<br>
+        The <b>div</b> element is often used as a container for other HTML elements.<br>
+        The <u>div</u> element has no requiredattributes, but style, class and id are common.<br>
+    </div>
+    <hr>
+    <p>
+        The <b>span</b> element is an <span style="color:orange; font-weight:bold">inline container</span> used to mark
+        up <i>a part of a text</i>, or <em>a part of a document</em>.
+    </p>
 </body>
 
 </html>
